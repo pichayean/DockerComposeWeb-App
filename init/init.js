@@ -44,14 +44,14 @@ db.movies.insertMany([
     year: 2008,
     imdbScore: 9.0,
     rottenTomatoes: 94,
-    posterUrl: "https://m.media-amazon.com/images/I/71pox3Y2huL._AC_SY679_.jpg"
+    posterUrl: "https://m.media-amazon.com/images/I/5151N2hUPiL.__AC_SX300_SY300_QL70_ML2_.jpg"
   },
   {
     title: "Parasite",
     year: 2019,
     imdbScore: 8.5,
     rottenTomatoes: 99,
-    posterUrl: "https://m.media-amazon.com/images/I/71c8od1Sz9L._AC_SY679_.jpg"
+    posterUrl: "https://image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
   }
 
 ]);

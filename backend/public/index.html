@@ -5,111 +5,153 @@
   <title>Team Movie App</title>
   <style>
     :root {
-      --bg: #f9f9fb;
-      --primary: #111;
-      --accent: #4a90e2;
-      --card-bg: #fff;
-      --radius: 1rem;
-      --shadow: 0 2px 12px rgba(0,0,0,0.05);
-    }
+  --bg: #f9f9fb;
+  --primary: #111;
+  --accent: #4a90e2;
+  --card-bg: #fff;
+  --radius: 1rem;
+  --shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
 
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--primary);
-      padding: 2rem;
-      margin: 0;
-      line-height: 1.6;
-    }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  padding: 2rem;
+  margin: 0;
+  line-height: 1.6;
+}
 
-    h1 {
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.25rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
+h1 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    form {
-      background: var(--card-bg);
-      padding: 1rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
 
-    form input {
-      display: block;
-      margin: 0.5rem 0;
-      padding: 0.6rem;
-      width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-    }
+form input {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
 
-    form button {
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin-top: 0.5rem;
-    }
+form button {
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
 
-    form button:hover {
-      background: #3578c2;
-    }
+form button:hover {
+  background: #3578c2;
+}
 
-    .team-list, .movie-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
+.team-list, .movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
 
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 1rem;
-      box-shadow: var(--shadow);
-      width: 220px;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
+/* 🔽 TEAM CARD */
+.team-list .card {
+  width: 160px;
+  padding: 0.5rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
 
-    .card:hover {
-      transform: translateY(-3px);
-    }
+.team-list .card:hover {
+  transform: translateY(-3px);
+}
 
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: var(--radius);
-      margin-bottom: 0.5rem;
-    }
+.team-list .card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
 
-    .card button {
-      margin: 0.25rem;
-      padding: 0.4rem 0.8rem;
-      border-radius: 0.4rem;
-      font-size: 0.9rem;
-      border: none;
-      cursor: pointer;
-    }
+/* 🔽 MOVIE CARD */
+.movie-list .card {
+  width: 220px;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
 
-    .card button:first-of-type {
-      background: #ffc107;
-      color: #000;
-    }
+.movie-list .card:hover {
+  transform: translateY(-3px);
+}
 
-    .card button:last-of-type {
-      background: #dc3545;
-      color: #fff;
-    }
+.movie-list .card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+}
+
+.movie-list .card button {
+  margin: 0.25rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-list .card button:first-of-type {
+  background: #ffc107;
+  color: #000;
+}
+
+.movie-list .card button:last-of-type {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* ปุ่มเพิ่มหนัง */
+#addBtn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#addBtn:hover {
+  background: #43a047;
+}
+
   </style>
 </head>
 <body>
